@@ -28,7 +28,7 @@ except ImportError:
 
 setup(
     name='sphinx-kml',
-    version='0.1.1',
+    version='0.1.2',
     url='https://github.com/coddingtonbear/sphinx-kml',
     description=(
         'Embed maps in your Sphinx documents using a locally-stored KML file.'
@@ -39,6 +39,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
+    include_package_data = True,
     install_requires=requirements,
     packages=find_packages(),
 )
