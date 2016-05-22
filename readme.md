@@ -22,7 +22,7 @@ Make the following alterations to your Sphinx project's `conf.py`:
 
 ```
 extensions = [
-    # other extensionsk
+    # other extensions
     'sphinx_kml',
 ]
 google_api_key = 'MYGOOGLEAPIKEY'
