@@ -1,3 +1,4 @@
+import json
 import os
 import urlparse
 import uuid
@@ -77,9 +78,11 @@ def visit_kml_node(self, node):
     )
     rendered = environment.get_template('google.html').render(
         html_id=node['html_id'],
-        kml_url=urlparse.urljoin(
-            '/_downloads/',
-            node['unique_name'],
+        kml_url=json.dumps(
+            urlparse.urljoin(
+                '/_downloads/',
+                node['unique_name'],
+            )
         ),
         options=node['options']
     )
